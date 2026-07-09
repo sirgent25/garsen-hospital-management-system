@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Management | Hospital Management System</title>
+
+    <link rel="stylesheet" href="admin-doctors.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Admin Panel</h2>
+
+        <ul>
+
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+
+            <li><a href="admin-patients.html">Patients</a></li>
+
+            <li class="active">
+                <a href="admin-doctors.html">Doctors</a>
+            </li>
+
+            <li><a href="admin-appointments.html">Appointments</a></li>
+
+            <li><a href="departments.html">Departments</a></li>
+
+            <li>
+                <a href="#" id="logoutBtn">Logout</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <div class="page-header">
+
+            <h1>Doctor Management</h1>
+
+            <p>Add, update and manage hospital doctors.</p>
+
+        </div>
+
+        <!-- Doctor Form -->
+
+        <div class="form-card">
+
+            <h2 id="formTitle">Add New Doctor</h2>
+
+            <form id="doctorForm">
+
+                <input type="hidden" id="doctorId">
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Dr. John Doe"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="doctor@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone Number</label>
+
+                        <input
+                            type="text"
+                            id="phone"
+                            placeholder="+2547XXXXXXXX"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Department</label>
+
+                        <select id="department" required>
+
+                            <option value="">
+                                Loading departments...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label>Specialization</label>
+
+                        <input
+                            type="text"
+                            id="specialization"
+                            placeholder="Heart Specialist"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Status</label>
+
+                        <select id="status" required>
+
+                            <option value="Available">
+                                Available
+                            </option>
+
+                            <option value="Busy">
+                                Busy
+                            </option>
+
+                            <option value="Off Duty">
+                                Off Duty
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" id="saveBtn">
+
+                    Save Doctor
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Doctors Table -->
+
+        <div class="table-card">
+
+            <div class="table-header">
+
+                <h2>Hospital Doctors</h2>
+
+                <input
+                    type="text"
+                    id="searchDoctor"
+                    placeholder="Search doctor..."
+                >
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Department</th>
+
+                        <th>Specialization</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Status</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="doctorsTable">
+
+                    <tr>
+
+                        <td colspan="7">
+
+                            Loading doctors...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="admin-doctors.js"></script>
+
+</body>
+</html>
+

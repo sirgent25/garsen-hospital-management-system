@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="profile-card">
+
+        <!-- Header -->
+        <div class="profile-header">
+
+            <div class="avatar">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Picture">
+            </div>
+
+            <h2 id="userName">Loading...</h2>
+            <p>Patient</p>
+
+        </div>
+
+        <!-- Profile Details -->
+        <div class="profile-info">
+
+            <div class="info-box">
+                <label for="fullName">Full Name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Full Name"
+                    disabled
+                >
+            </div>
+
+            <div class="info-box">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    disabled
+                >
+            </div>
+
+            <div class="info-box">
+                <label for="phone">Phone Number</label>
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Phone Number"
+                    disabled
+                >
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button id="editBtn">
+                Edit Profile
+            </button>
+
+            <button id="backBtn">
+                Back to Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+document.getElementById("backBtn").addEventListener("click", () => {
+    window.location.href = "dashboard.html";
+});
+</script>
+
+<script type="module" src="profile.js"></script>
+
+</body>
+</html>

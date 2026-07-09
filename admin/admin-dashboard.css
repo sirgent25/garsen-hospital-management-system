@@ -1,0 +1,429 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:#0d47a1;
+
+    color:#fff;
+
+    position:fixed;
+
+    height:100vh;
+
+    overflow-y:auto;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.logo i{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    margin-bottom:5px;
+
+}
+
+.logo p{
+
+    color:#d9e6ff;
+
+    font-size:15px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.sidebar ul li{
+
+    margin:5px 0;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 25px;
+
+    transition:.3s;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#1565c0;
+
+}
+
+.sidebar ul li.active{
+
+    background:#1976d2;
+
+    border-left:5px solid #90caf9;
+
+}
+
+.sidebar ul li i{
+
+    width:20px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:35px;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.header h1{
+
+    color:#0d47a1;
+
+    margin-bottom:8px;
+
+}
+
+.header p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card i{
+
+    font-size:40px;
+
+    color:#1976d2;
+
+    margin-bottom:15px;
+
+}
+
+.card h2{
+
+    font-size:36px;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:#777;
+
+    font-size:17px;
+
+}
+
+/* ===========================
+   TABLE SECTION
+=========================== */
+
+.table-section{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+.table-section h2{
+
+    color:#0d47a1;
+
+    margin-bottom:20px;
+
+}
+
+.table-section table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.table-section th{
+
+    background:#1976d2;
+
+    color:white;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+.table-section td{
+
+    padding:14px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.table-section tr:hover{
+
+    background:#f7f9fc;
+
+}
+
+/* ===========================
+   STATUS BADGES
+=========================== */
+
+.pending{
+
+    color:#ff9800;
+
+    font-weight:bold;
+
+}
+
+.approved{
+
+    color:green;
+
+    font-weight:bold;
+
+}
+
+.completed{
+
+    color:#1976d2;
+
+    font-weight:bold;
+
+}
+
+.cancelled{
+
+    color:red;
+
+    font-weight:bold;
+
+}
+
+.available{
+
+    color:green;
+
+    font-weight:bold;
+
+}
+
+.busy{
+
+    color:#ff9800;
+
+    font-weight:bold;
+
+}
+
+.off-duty{
+
+    color:red;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        width:220px;
+
+    }
+
+    .main-content{
+
+        margin-left:220px;
+
+        width:calc(100% - 220px);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .table-section{
+
+        overflow-x:auto;
+
+    }
+
+}

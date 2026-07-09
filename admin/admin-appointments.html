@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appointment Management | Garsen Hospital</title>
+
+    <link rel="stylesheet" href="admin-appointments.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fas fa-hospital"></i>
+
+            <h2>Garsen Hospital</h2>
+
+            <p>Administrator</p>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="admin-dashboard.html">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="patients.html">
+                    <i class="fas fa-users"></i>
+                    Patients
+                </a>
+            </li>
+
+            <li>
+                <a href="admin-doctors.html">
+                    <i class="fas fa-user-doctor"></i>
+                    Doctors
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="admin-appointments.html">
+                    <i class="fas fa-calendar-check"></i>
+                    Appointments
+                </a>
+            </li>
+
+            <li>
+                <a href="departments.html">
+                    <i class="fas fa-building"></i>
+                    Departments
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fas fa-chart-pie"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="header">
+
+            <div>
+
+                <h1>Appointment Management</h1>
+
+                <p>
+                    Manage all patient appointments
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- Search & Filter -->
+
+        <div class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by patient or doctor..."
+            >
+
+            <select id="statusFilter">
+
+                <option value="All">All Appointments</option>
+
+                <option value="Pending">Pending</option>
+
+                <option value="Approved">Approved</option>
+
+                <option value="Completed">Completed</option>
+
+                <option value="Rejected">Rejected</option>
+
+            </select>
+
+        </div>
+
+        <!-- Appointments Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Patient</th>
+
+                        <th>Doctor</th>
+
+                        <th>Department</th>
+
+                        <th>Date</th>
+
+                        <th>Time</th>
+
+                        <th>Status</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="appointmentsTable">
+
+                    <tr>
+
+                        <td colspan="7">
+
+                            Loading appointments...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="admin-appointments.js"></script>
+
+</body>
+
+</html>

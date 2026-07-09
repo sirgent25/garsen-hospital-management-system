@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garsen Hospital</title>
+
+    <link rel="stylesheet" href="doctors.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>🏥 Garsen Hospital</h2>
+
+    <ul>
+
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+        <li><a href="profile.html">👤 Profile</a></li>
+
+        <li><a href="appointments.html">📅 Appointments</a></li>
+
+        <li class="active">
+            <a href="doctors.html">👨‍⚕️ Doctors</a>
+        </li>
+
+        <li><a href="login.html" id="logoutBtn">🚪 Logout</a></li>
+
+    </ul>
+
+</div>
+
+<div class="main-content">
+
+    <header>
+
+        <h1>Our Doctors</h1>
+
+        <p>
+            View our specialists and book an appointment with the doctor of your choice.
+        </p>
+
+    </header>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchDoctor"
+            placeholder="Search by doctor's name or specialization..."
+        >
+
+    </div>
+
+    <!-- Doctors Container -->
+
+    <div class="doctor-container" id="doctorContainer">
+
+        <!-- Doctor Card -->
+
+        <!--
+        Doctors will be loaded automatically
+        from Firestore by doctors.js
+        -->
+
+    </div>
+
+</div>
+
+<script type="module" src="doctors.js"></script>
+
+</body>
+</html>

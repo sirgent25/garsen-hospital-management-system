@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments | Hospital Management System</title>
+
+    <link rel="stylesheet" href="departments.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Admin Panel</h2>
+
+        <ul>
+
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+
+            <li><a href="admin-patients.html">Patients</a></li>
+
+            <li><a href="admin-doctors.html">Doctors</a></li>
+
+            <li><a href="admin-appointments.html">Appointments</a></li>
+
+            <li class="active"><a href="departments.html">Departments</a></li>
+
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <div class="page-header">
+
+            <h1>Department Management</h1>
+
+            <p>Create, update and manage hospital departments.</p>
+
+        </div>
+
+        <!-- Add Department -->
+
+        <div class="form-card">
+
+            <h2 id="formTitle">Add New Department</h2>
+
+            <form id="departmentForm">
+
+                <input type="hidden" id="departmentId">
+
+                <div class="input-group">
+
+                    <label>Department Name</label>
+
+                    <input
+                        type="text"
+                        id="departmentName"
+                        placeholder="e.g Cardiology"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Description</label>
+
+                    <textarea
+                        id="description"
+                        rows="4"
+                        placeholder="Department description..."
+                        required
+                    ></textarea>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Head of Department</label>
+
+                    <input
+                        type="text"
+                        id="head"
+                        placeholder="e.g Dr. Fatma Ibrahim"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" id="saveBtn">
+
+                    Save Department
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Department List -->
+
+        <div class="table-card">
+
+            <div class="table-header">
+
+                <h2>Hospital Departments</h2>
+
+                <input
+                    type="text"
+                    id="searchDepartment"
+                    placeholder="Search department..."
+                >
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Department</th>
+
+                        <th>Description</th>
+
+                        <th>Head</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="departmentsTable">
+
+                    <tr>
+
+                        <td colspan="4">
+
+                            Loading departments...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="departments.js"></script>
+
+</body>
+</html>

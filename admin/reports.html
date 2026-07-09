@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Garsen Hospital</title>
+
+    <link rel="stylesheet" href="reports.css">
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>Admin Panel</h2>
+
+        <ul>
+
+            <li>
+                <a href="admin-dashboard.html">Dashboard</a>
+            </li>
+
+            <li>
+                <a href="admin-patients.html">Patients</a>
+            </li>
+
+            <li>
+                <a href="admin-doctors.html">Doctors</a>
+            </li>
+
+            <li>
+                <a href="admin-appointments.html">Appointments</a>
+            </li>
+
+            <li>
+                <a href="departments.html">Departments</a>
+            </li>
+
+            <li class="active">
+                <a href="reports.html">Reports</a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">Logout</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <div class="page-header">
+
+            <h1>Hospital Reports</h1>
+
+            <p>View hospital statistics and download reports.</p>
+
+        </div>
+
+        <!-- Statistics Cards -->
+
+        <div class="stats">
+
+            <div class="card">
+                <h3>Total Patients</h3>
+                <h2 id="totalPatients">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Doctors</h3>
+                <h2 id="totalDoctors">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Departments</h3>
+                <h2 id="totalDepartments">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Appointments</h3>
+                <h2 id="totalAppointments">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <h2 id="pendingAppointments">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <h2 id="completedAppointments">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Rejected</h3>
+                <h2 id="rejectedAppointments">0</h2>
+            </div>
+
+        </div>
+
+        <!-- Download Button -->
+
+        <div class="report-actions">
+
+            <button id="downloadPdfBtn">
+
+                Download PDF Report
+
+            </button>
+
+        </div>
+
+        <!-- Recent Appointments -->
+
+        <div class="table-card">
+
+            <h2>Recent Appointments</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="recentAppointments">
+
+                    <tr>
+
+                        <td colspan="4">
+
+                            Loading...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="reports.js"></script>
+
+</body>
+</html>
+

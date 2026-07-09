@@ -1,0 +1,321 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef5fb;
+    padding:30px;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ===========================
+   BOOKING CARD
+=========================== */
+
+.appointment-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.header h1{
+
+    color:#0077b6;
+
+    margin-bottom:8px;
+
+}
+
+.header p{
+
+    color:#666;
+
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:18px;
+
+}
+
+.input-group label{
+
+    font-weight:bold;
+
+    margin-bottom:6px;
+
+    color:#333;
+
+}
+
+.input-group input,
+
+.input-group textarea{
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+.input-group input:focus,
+
+.input-group textarea:focus{
+
+    outline:none;
+
+    border-color:#0077b6;
+
+}
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+/* ===========================
+   DOCTOR CARD
+=========================== */
+
+.selected-doctor{
+
+    background:#f8fbff;
+
+    border-left:6px solid #0077b6;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+.selected-doctor h3{
+
+    color:#0077b6;
+
+    margin-bottom:15px;
+
+}
+
+.doctor-info p{
+
+    margin:10px 0;
+
+    color:#444;
+
+    font-size:15px;
+
+}
+
+.doctor-info strong{
+
+    color:#000;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#0077b6;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#005f8e;
+
+}
+
+/* ===========================
+   APPOINTMENTS TABLE
+=========================== */
+
+.appointments-list{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.appointments-list h2{
+
+    color:#0077b6;
+
+    margin-bottom:20px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+table th{
+
+    background:#0077b6;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+table td{
+
+    padding:12px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+table tr:hover{
+
+    background:#f5f5f5;
+
+}
+
+/* ===========================
+   STATUS
+=========================== */
+
+.pending{
+
+    color:#ff9800;
+
+    font-weight:bold;
+
+}
+
+.approved{
+
+    color:green;
+
+    font-weight:bold;
+
+}
+
+.cancelled{
+
+    color:red;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+
+#backBtn{
+
+    margin-top:20px;
+
+    background:#555;
+
+}
+
+#backBtn:hover{
+
+    background:#333;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .row{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

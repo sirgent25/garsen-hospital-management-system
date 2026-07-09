@@ -1,0 +1,246 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.sidebar{
+    width:250px;
+    background:#1e3a8a;
+    color:white;
+    padding:25px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin-bottom:15px;
+}
+
+.sidebar ul li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a{
+    background:#2563eb;
+}
+
+/* ===========================
+   Main Content
+=========================== */
+
+.content{
+    flex:1;
+    padding:30px;
+}
+
+.page-header{
+    margin-bottom:25px;
+}
+
+.page-header h1{
+    color:#1e3a8a;
+    margin-bottom:8px;
+}
+
+.page-header p{
+    color:#666;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.form-card,
+.table-card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.form-card h2,
+.table-card h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.input-group label{
+    margin-bottom:6px;
+    font-weight:bold;
+    color:#333;
+}
+
+.input-group input,
+.input-group textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:#2563eb;
+}
+
+textarea{
+    resize:vertical;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+   Table
+=========================== */
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    gap:20px;
+}
+
+.table-header input{
+    width:280px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#1e3a8a;
+    color:white;
+}
+
+thead th{
+    padding:14px;
+    text-align:left;
+}
+
+tbody td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+}
+
+tbody tr:hover{
+    background:#f8fbff;
+}
+
+/* ===========================
+   Action Buttons
+=========================== */
+
+.actions{
+    display:flex;
+    gap:10px;
+}
+
+.edit-btn{
+    background:#f59e0b;
+}
+
+.edit-btn:hover{
+    background:#d97706;
+}
+
+.delete-btn{
+    background:#dc2626;
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .table-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .table-header input{
+        width:100%;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}

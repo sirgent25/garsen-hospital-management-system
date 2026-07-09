@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard | Garsen Hospital</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>
+                <i class="fas fa-hospital"></i>
+                Garsen Hospital
+            </h2>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="appointments.html">
+                    <i class="fas fa-calendar-check"></i>
+                    Appointments
+                </a>
+            </li>
+
+            <li>
+                <a href="doctors.html">
+                    <i class="fas fa-user-doctor"></i>
+                    Doctors
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="top-bar">
+
+            <div>
+
+                <h1>Patient Dashboard</h1>
+
+                <p>Welcome back,
+                    <strong id="userName">
+                        Patient
+                    </strong>
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- Cards -->
+
+        <section class="cards">
+
+            <!-- Upcoming Appointment -->
+
+            <div class="card">
+
+                <h2>
+                    <i class="fas fa-calendar-days"></i>
+                    Upcoming Appointment
+                </h2>
+
+                <p><strong>Date:</strong>
+                    <span id="appointmentDate">
+                        No appointment
+                    </span>
+                </p>
+
+                <p><strong>Time:</strong>
+                    <span id="appointmentTime">
+                        --
+                    </span>
+                </p>
+
+                <p><strong>Department:</strong>
+                    <span id="appointmentDepartment">
+                        --
+                    </span>
+                </p>
+
+            </div>
+
+            <!-- Assigned Doctor -->
+
+            <div class="card">
+
+                <h2>
+                    <i class="fas fa-user-doctor"></i>
+                    Assigned Doctor
+                </h2>
+
+                <p><strong>Name:</strong>
+                    <span id="doctorName">
+                        Not Assigned
+                    </span>
+                </p>
+
+                <p><strong>Specialization:</strong>
+                    <span id="doctorSpecialization">
+                        --
+                    </span>
+                </p>
+
+                <p><strong>Status:</strong>
+                    <span id="doctorStatus">
+                        --
+                    </span>
+                </p>
+
+            </div>
+
+            <!-- Total Appointments -->
+
+            <div class="card">
+
+                <h2>
+                    <i class="fas fa-notes-medical"></i>
+                    Total Appointments
+                </h2>
+
+                <h1 id="totalAppointments">
+
+                    0
+
+                </h1>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Activity -->
+
+        <section class="activity">
+
+            <h2>
+
+                <i class="fas fa-clock-rotate-left"></i>
+
+                Recent Activity
+
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+
+                        <th>Doctor</th>
+
+                        <th>Department</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="activityTable">
+
+                    <tr>
+
+                        <td colspan="4">
+
+                            No recent activity.
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="dashboard.js"></script>
+
+</body>
+</html>
