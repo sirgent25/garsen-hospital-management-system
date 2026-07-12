@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
-    const fullName = document.getElementById("fullname").value.trim();
+    const fullName = document.getElementById("fullName").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const password = document.getElementById("password").value;

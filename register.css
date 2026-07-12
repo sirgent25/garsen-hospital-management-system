@@ -1,0 +1,159 @@
+/* ==========================
+   General Styling
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #e3f2fd,
+        #bbdefb
+    );
+}
+
+/* ==========================
+   Container
+========================== */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================
+   Registration Box
+========================== */
+
+.register-box {
+    width: 480px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* ==========================
+   Logo Section
+========================== */
+
+.logo-container {
+    margin-bottom: 25px;
+}
+
+.hospital-logo {
+    width: 170px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-container h1 {
+    margin-top: 10px;
+    color: #0077b6;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hospital-tagline {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.register-box h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
+}
+
+/* ==========================
+   Button
+========================== */
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005f8d;
+}
+
+/* ==========================
+   Login Link
+========================== */
+
+.register-box p {
+    margin-top: 20px;
+    color: #555;
+}
+
+.register-box a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-box a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 550px) {
+    .register-box {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .hospital-logo {
+        width: 140px;
+    }
+
+    .logo-container h1 {
+        font-size: 28px;
+    }
+}

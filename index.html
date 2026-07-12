@@ -3,36 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System</title>
+    <title>Garsen Hospital - Patient Registration</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
 
     <div class="container">
 
-        <div>
+        <div class="register-box">
+
+            <!-- Hospital Logo -->
+            <div class="logo-container">
+
+                <img
+                    src="images/logo.png"
+                    alt="Garsen Hospital Logo"
+                    class="hospital-logo"
+                >
+
+                <h1>Garsen Hospital</h1>
+
+                <p class="hospital-tagline">
+                    Caring for Life, Serving with Compassion
+                </p>
+
+            </div>
+
             <h2>Patient Registration</h2>
 
             <form id="registerForm">
 
-                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Full Name"
+                    required
+                >
 
-                <input type="email" id="email" placeholder="Email Address" required>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
 
-                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                >
 
-                <input type="password" id="password" placeholder="Create Password" required>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create Password"
+                    required
+                >
 
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required
+                >
 
-                <button type="submit">Register</button>
+                <button type="submit">
+                    Register
+                </button>
 
             </form>
 
             <p>
                 Already registered?
-                <a href="login.html">Login</a>
+                <a href="login.html">Login Here</a>
             </p>
 
         </div>
