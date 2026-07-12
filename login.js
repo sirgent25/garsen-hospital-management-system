@@ -1,8 +1,13 @@
-import { auth } from "./config/firebase.js";
+import { auth, db } from "./config/firebase.js";
 
 import {
     signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+import {
+    doc,
+    getDoc
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const loginForm = document.getElementById("loginForm");
 
@@ -11,22 +16,58 @@ loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email = document.getElementById("email").value.trim();
-
     const password = document.getElementById("password").value;
 
     try {
 
-        await signInWithEmailAndPassword(auth, email, password);
+        const userCredential =
+            await signInWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
 
-        alert("Login successful!");
+        const user = userCredential.user;
 
-        window.location.href = "dashboard.html";
+        // Check if the user is an admin
+        const adminRef = doc(
+            db,
+            "admins",
+            user.uid
+        );
 
-    } catch (error) {
+        const adminSnap =
+            await getDoc(adminRef);
 
-        console.error("Login Error:", error);
+        if (adminSnap.exists()) {
 
-        alert("Login failed: " + error.message);
+            alert("Admin login successful!");
+
+            window.location.href =
+                "admin/admin-dashboard.html";
+
+        } else {
+
+            alert("Login successful!");
+
+            window.location.href =
+                "dashboard.html";
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Login Error:",
+            error
+        );
+
+        alert(
+            "Login failed: " +
+            error.message
+        );
 
     }
 
