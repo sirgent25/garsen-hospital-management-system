@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Medicines</title>
+    <link rel="stylesheet" href="doctor-medicines.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>Doctor Portal</h2>
+
+    <a href="doctor-dashboard.html">Dashboard</a>
+    <a href="doctor-patients.html">Patients</a>
+    <a href="doctor-medicines.html">Medicines</a>
+    <a href="doctor-prescriptions.html">Prescriptions</a>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+</div>
+
+<div class="main">
+
+    <h1>Available Medicines</h1>
+
+    <input
+        type="text"
+        id="searchMedicine"
+        placeholder="Search medicine..."
+    >
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Form</th>
+                <th>Stock</th>
+                <th>Expiry Date</th>
+            </tr>
+        </thead>
+
+        <tbody id="medicineTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script
+    type="module"
+    src="doctor-medicines.js">
+</script>
+
+</body>
+</html>

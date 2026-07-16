@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Prescriptions | Garsen Hospital</title>
+
+    <link rel="stylesheet"
+          href="patient-prescriptions.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>
+                <i class="fas fa-hospital"></i>
+                Garsen Hospital
+            </h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="appointments.html">
+                    <i class="fas fa-calendar-check"></i>
+                    Appointments
+                </a>
+            </li>
+
+            <li>
+                <a href="doctors.html">
+                    <i class="fas fa-user-doctor"></i>
+                    Doctors
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="patient-prescriptions.html">
+                    <i class="fas fa-prescription-bottle-medical"></i>
+                    My Prescriptions
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="top-bar">
+
+            <div>
+                <h1>My Prescriptions</h1>
+
+                <p>
+                    View your prescribed medicines and instructions.
+                </p>
+            </div>
+
+        </header>
+
+        <section class="activity">
+
+            <h2>
+                <i class="fas fa-pills"></i>
+                Prescription History
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Doctor</th>
+                        <th>Medicine</th>
+                        <th>Dosage</th>
+                        <th>Instructions</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="prescriptionsTable">
+
+                    <tr>
+
+                        <td colspan="6">
+                            Loading prescriptions...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module"
+        src="patient-prescriptions.js">
+</script>
+
+</body>
+</html>

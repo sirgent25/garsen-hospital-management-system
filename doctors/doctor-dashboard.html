@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor-dashboard.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>Doctor Portal</h2>
+
+    <a href="doctor-dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="doctor-patients.html">
+        Patients
+    </a>
+
+    <a href="doctor-medicines.html">
+        Medicines
+    </a>
+
+    <a href="doctor-prescriptions.html">
+        Prescriptions
+    </a>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+</div>
+
+<div class="main">
+
+    <h1 id="doctorName">
+        Welcome Doctor
+    </h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Appointments</h3>
+            <h1 id="appointmentsCount">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Pending</h3>
+            <h1 id="pendingCount">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Completed</h3>
+            <h1 id="completedCount">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Patients Treated</h3>
+            <h1 id="patientsCount">0</h1>
+        </div>
+
+    </div>
+
+    <h2>Today's Appointments</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="appointmentsTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script
+    type="module"
+    src="doctor-dashboard.js">
+</script>
+
+</body>
+</html>

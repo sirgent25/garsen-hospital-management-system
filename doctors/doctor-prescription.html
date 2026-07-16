@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prescriptions</title>
+    <link rel="stylesheet"
+          href="doctor-prescriptions.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>Doctor Portal</h2>
+
+    <a href="doctor-dashboard.html">Dashboard</a>
+    <a href="doctor-patients.html">Patients</a>
+    <a href="doctor-medicines.html">Medicines</a>
+    <a href="doctor-prescriptions.html">
+        Prescriptions
+    </a>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+</div>
+
+<div class="main">
+
+    <h1>Create Prescription</h1>
+
+    <form id="prescriptionForm">
+
+        <select id="patientSelect" required>
+            <option value="">
+                Select Patient
+            </option>
+        </select>
+
+        <select id="medicineSelect" required>
+            <option value="">
+                Select Medicine
+            </option>
+        </select>
+
+        <input
+            type="text"
+            id="dosage"
+            placeholder="Dosage"
+            required
+        >
+
+        <textarea
+            id="instructions"
+            placeholder="Instructions"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Save Prescription
+        </button>
+
+    </form>
+
+    <h2>Previous Prescriptions</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Patient</th>
+                <th>Medicine</th>
+                <th>Dosage</th>
+                <th>Date</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="prescriptionsTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script type="module"
+        src="doctor-prescriptions.js">
+</script>
+
+</body>
+</html>

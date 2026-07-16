@@ -1,0 +1,201 @@
+/* ==========================
+   General
+========================== */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background: #f5f7fa;
+}
+
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #0077b6;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar a,
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: white;
+    color: #0077b6;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+    background: #e3f2fd;
+}
+
+/* ==========================
+   Main Content
+========================== */
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.main h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.main h2 {
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   Form
+========================== */
+
+form {
+    max-width: 700px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0,119,182,0.3);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #005f8d;
+}
+
+/* ==========================
+   Table
+========================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #0077b6;
+    color: white;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+/* ==========================
+   Status Colors
+========================== */
+
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.completed {
+    color: blue;
+    font-weight: bold;
+}
+
+.cancelled {
+    color: red;
+    font-weight: bold;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

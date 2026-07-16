@@ -29,15 +29,15 @@ loginForm.addEventListener("submit", async (e) => {
 
         const user = userCredential.user;
 
-        // Check if the user is an admin
-        const adminRef = doc(
-            db,
-            "admins",
-            user.uid
-        );
+        console.log("Logged in UID:", user.uid);
 
-        const adminSnap =
-            await getDoc(adminRef);
+        const adminRef = doc(db, "admins", user.uid);
+        const adminSnap = await getDoc(adminRef);
+
+        console.log(
+            "Admin document exists:",
+            adminSnap.exists()
+        );
 
         if (adminSnap.exists()) {
 
@@ -59,10 +59,7 @@ loginForm.addEventListener("submit", async (e) => {
 
     catch (error) {
 
-        console.error(
-            "Login Error:",
-            error
-        );
+        console.error(error);
 
         alert(
             "Login failed: " +

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Patients</title>
+    <link rel="stylesheet" href="doctor-patients.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>Doctor Portal</h2>
+
+    <a href="doctor-dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="doctor-patients.html">
+        Patients
+    </a>
+
+    <a href="doctor-medicines.html">
+        Medicines
+    </a>
+
+    <a href="doctor-prescriptions.html">
+        Prescriptions
+    </a>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+</div>
+
+<div class="main">
+
+    <h1>My Patients</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Appointments</th>
+            </tr>
+        </thead>
+
+        <tbody id="patientsTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script type="module"
+        src="doctor-patients.js">
+</script>
+
+</body>
+</html>
